@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Row, Col } from 'antd';
+import { Button, Row, Col, Avatar } from 'antd';
 
 
 const axios = require('axios');
@@ -55,7 +55,7 @@ class Profile extends React.Component {
                     Profile
                 </h2>
 
-                <Row>
+                <Row type="flex" justify="space-between">
                     <Col span={12}>
                         <h3>{this.state.full_name}</h3>
                         <div>Gender: {this.state.gender}</div>
@@ -63,8 +63,8 @@ class Profile extends React.Component {
                         <div>Email: {this.state.email}</div>
                         <div>City: {this.state.city}</div>
                     </Col>
-                    <Col span={8}>
-                        <img src={this.state.avatar} alt="avatar" width="120px" height="120px"/>
+                    <Col span={4} >
+                        <Avatar src={this.state.avatar} alt="avatar" size={120}/>
                     </Col>
                     
                 </Row>

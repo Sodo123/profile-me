@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu } from 'antd';
 import './index.css'
 import {
   Link
@@ -10,34 +10,19 @@ const { Header, Content, Footer } = Layout;
 class LayoutWeb extends React.Component{
     render(){
         return(
-        // <div>
-        //  <nav>
-        //     <ul>
-        //       <li>
-        //         <Link to="/">Home</Link>
-        //       </li>
-        //       <li>
-        //         <Link to="/profile">Profile</Link>
-        //       </li>
-        //       <li>
-        //         <Link to="/users">Users</Link>
-        //       </li>
-        //     </ul>
-        //   </nav>
-        //   {this.props.children}
-        //   </div>
+
         <Layout className="layout">
         <Header>
           <div className="logo" />
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['2']}
+            defaultSelectedKeys={['1']}
             style={{ lineHeight: '64px' }}
           >
             <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
+            <Menu.Item key="3"><Link to="/todos">Todos</Link></Menu.Item>
             <Menu.Item key="2"><Link to="/profile">Profile</Link></Menu.Item>
-            <Menu.Item key="3"><Link to="/user">User</Link></Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 50px' }}>

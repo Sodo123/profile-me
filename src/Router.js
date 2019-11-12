@@ -5,24 +5,20 @@ import {
   } from "react-router-dom";
   import Home from './components/pages/home'
   import Profile from './components/pages/profile'
-  
-  function Users() {
-    return <h2>Users</h2>;
-  }
-
+  import Todo from './components/pages/todo'
 
 export default class Routers extends React.Component{
     render(){
         return(
             <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
                 <Route path="/profile">
                     <Profile />
                 </Route>
-                <Route path="/users">
-                  <Users />
-                </Route>
-                <Route path="/">
-                  <Home />
+                <Route path="/todos">
+                  <Todo />
                 </Route>
           </Switch>
         )
